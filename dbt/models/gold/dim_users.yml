@@ -11,7 +11,7 @@ models:
           - unique
         meta:
           metrics:
-            total_users_count:
-              type: count_distinct
+            - name: uniq_users_count
+            - type: count_distinct
       - name: intial_game_utc_at
-        description: "Datetime in UTC of the first played game all times in the pre-defined dataset"
+        description: ""
