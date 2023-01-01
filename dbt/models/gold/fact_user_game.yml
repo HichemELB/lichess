@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fact_user_game
+    description: ""
+    columns:
+      - name: date
+        description: ""
+      - name: user_id
+        description: ""
+      - name: intial_game_utc_at
+        description: ""
+      - name: game_id
+        description: ""
+        meta:
+          metrics:
+            - name: played_game_count
+            - type: count
+      - name: play_time
+        description: ""
+        meta:
+          metrics:
+            - name: played_time_total
+            - type: sum
