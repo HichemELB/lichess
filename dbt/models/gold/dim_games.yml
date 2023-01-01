@@ -6,13 +6,15 @@ models:
     columns:
       - name: game_id
         description: ""
-        meta:
-          metrics:
-            total_game_count:
-              type: count_distinct
         tests:
           - not_null
           - unique
+        meta:
+          metrics:
+            - name: uniq_game_count
+            - type: count_distinct
+            - name: game_count
+            - type: count
       - name: game_utc_at
         description: ""
       - name: white_user_id
@@ -23,7 +25,7 @@ models:
         description: ""
         meta:
           metrics:
-            avg_play_time:
-              type: average
+            - name: avg_play_time
+            - type: average
       - name: time_control
         description: ""
