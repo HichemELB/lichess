@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_games
+    description: ""
+    columns:
+      - name: game_id
+        description: ""
+        meta:
+          metrics:
+            total_game_count:
+              type: count_distinct
+        tests:
+          - not_null
+          - unique
+      - name: game_utc_at
+        description: ""
+      - name: white_user_id
+        description: ""
+      - name: black_user_id
+        description: ""
+      - name: play_time
+        description: ""
+        meta:
+          metrics:
+            avg_play_time:
+              type: average
+      - name: time_control
+        description: ""

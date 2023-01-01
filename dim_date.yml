@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: ""
+    columns:
+      - name: date
+        description: ""
+      - name: yearmonth
+        description: ""
+      - name: dayofmonth
+        description: ""
+      - name: dayofweek
+        description: ""

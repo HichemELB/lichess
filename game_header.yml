@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: game_header
+    description: ""
+    columns:
+      - name: inserted_at
+        description: ""
+      - name: site_id
+        description: ""
+      - name: date
+        description: ""
+      - name: site
+        description: ""
+      - name: event
+        description: ""
+      - name: white
+        description: ""
+      - name: black
+        description: ""
+      - name: result
+        description: ""
+      - name: blackelo
+        description: ""
+      - name: blackratingdiff
+        description: ""
+      - name: eco
+        description: ""
+      - name: opening
+        description: ""
+      - name: termination
+        description: ""
+      - name: timecontrol
+        description: ""
+      - name: utcdate
+        description: ""
+      - name: utctime
+        description: ""
+      - name: whiteelo
+        description: ""
+      - name: whiteratingdiff
+        description: ""
+      - name: blacktitle
+        description: ""
+      - name: round
+        description: ""
+      - name: whitetitle
+        description: ""

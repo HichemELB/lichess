@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: lichess_org
+    database: lichess-372317
+    schema: lichess_org
+    tables:
+      - name: dataflow__lichess__GameHeaderStream_*

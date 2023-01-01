@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: ""
+    columns:
+      - name: user_id
+        description: "The user ID"
+        tests:
+          - not_null
+          - unique
+        meta:
+          metrics:
+            total_users_count:
+              type: count_distinct
+      - name: intial_game_utc_at
+        description: "Datetime in UTC of the first played game all times in the pre-defined dataset"
