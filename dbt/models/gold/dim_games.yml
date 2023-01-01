@@ -12,9 +12,9 @@ models:
         meta:
           metrics:
             - name: uniq_game_count
-            - type: count_distinct
+              type: count_distinct
             - name: game_count
-            - type: count
+              type: count
       - name: game_utc_at
         description: ""
       - name: white_user_id
@@ -26,6 +26,6 @@ models:
         meta:
           metrics:
             - name: avg_play_time
-            - type: average
+              type: average
       - name: time_control
         description: ""

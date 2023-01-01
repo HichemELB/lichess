@@ -15,10 +15,10 @@ models:
         meta:
           metrics:
             - name: played_game_count
-            - type: count
+              type: count
       - name: play_time
         description: ""
         meta:
           metrics:
             - name: played_time_total
-            - type: sum
+              type: sum

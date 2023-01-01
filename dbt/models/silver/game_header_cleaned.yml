@@ -1,0 +1,104 @@
+version: 2
+models:
+  - name: game_header_cleaned
+    columns:
+      - name: site_id
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: date
+        description: ""
+        meta:
+          dimension:
+            type: timestamp
+      - name: utcdatetime
+        description: ""
+        meta:
+          dimension:
+            type: timestamp
+      - name: site
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: event
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: white
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: black
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: result
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: blackelo
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: blackratingdiff
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: eco
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: opening
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: termination
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: timecontrol
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: whiteelo
+        description: ""
+        meta:
+          dimension:
+            type: number
+      - name: whiteratingdiff
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: blacktitle
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: round
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: whitetitle
+        description: ""
+        meta:
+          dimension:
+            type: string
+      - name: aprox_play_time
+        description: ""
+        meta:
+          dimension:
+            type: number
