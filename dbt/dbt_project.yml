@@ -27,3 +27,6 @@ models:
             dim_games:
                 materialized: view
                 +schema: gold
+            fact_user_game:
+                materialized: view
+                +schema: gold
