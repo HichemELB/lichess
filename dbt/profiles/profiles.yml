@@ -1,0 +1,17 @@
+config:
+    send_anonymous_usage_stats: False
+    use_colors: True
+    fail_fast: True
+
+default:
+  target: production
+  outputs:
+    production:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      project: "{{ env_var('GCP_PROJECT') }}"
+      location: EU
+      dataset: dbt
+      threads: 5
+      timeout_seconds: 1800
