@@ -4,9 +4,9 @@
 
 
 WITH white_black AS (
-    SELECT White AS user_id FROM {{ ref('game_header') }}
+    SELECT White AS user_id FROM {{ ref('game_header_cleaned') }}
     UNION ALL
-    SELECT Black AS user_id FROM {{ ref('game_header') }}
+    SELECT Black AS user_id FROM {{ ref('game_header_cleaned') }}
 ),
     users AS (
     SELECT DISTINCT user_id
@@ -15,16 +15,16 @@ WITH white_black AS (
     initial_game AS (
     SELECT
         users.user_id
-      , MIN(CAST(CAST(DATE(game_header.UTCDate) AS STRING) || ' ' || CAST(game_header.UTCTime AS STRING) AS TIMESTAMP)) OVER (PARTITION BY game_header.White) AS intial_game_utc_at
+      , MIN(UTCDateTime) OVER (PARTITION BY game_header.White) AS intial_game_utc_at
     FROM users
-    INNER JOIN {{ ref('game_header') }} game_header
+    INNER JOIN {{ ref('game_header_cleaned') }} game_header
         ON users.user_id = game_header.White
     UNION ALL
     SELECT
         users.user_id
-       , MIN(CAST(CAST(DATE(game_header.UTCDate) AS STRING) || ' ' || CAST(game_header.UTCTime AS STRING) AS TIMESTAMP)) OVER (PARTITION BY game_header.Black) AS intial_game_utc_at
+       , MIN(UTCDateTime) OVER (PARTITION BY game_header.Black) AS intial_game_utc_at
     FROM users
-    INNER JOIN {{ ref('game_header') }} game_header
+    INNER JOIN {{ ref('game_header_cleaned') }} game_header
         ON users.user_id = game_header.Black
 )
 SELECT

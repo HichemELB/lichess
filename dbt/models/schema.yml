@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: dbt_silver
+    database: lichess-372317
+    schema: dbt_silver
+    tables:
+      - name: game_header

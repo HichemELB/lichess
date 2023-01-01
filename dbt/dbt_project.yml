@@ -13,6 +13,10 @@ clean-targets:
 
 models:
     analytics_chess:
+        silver:
+            game_header_cleaned:
+                materialized: view
+                +schema: silver
         gold:
             dim_date:
                 materialized: view
