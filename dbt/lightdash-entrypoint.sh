@@ -8,5 +8,4 @@
 # cd /usr/app/packages/backend
 # --------------
 
-
 exec yarn start
