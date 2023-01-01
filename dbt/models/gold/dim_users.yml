@@ -11,7 +11,7 @@ models:
           - unique
         meta:
           metrics:
-            - name: uniq_users_count
+            uniq_users_count:
               type: count_distinct
       - name: intial_game_utc_at
         description: ""

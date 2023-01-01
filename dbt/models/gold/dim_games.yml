@@ -11,9 +11,9 @@ models:
           - unique
         meta:
           metrics:
-            - name: uniq_game_count
+            uniq_game_count:
               type: count_distinct
-            - name: game_count
+            game_count:
               type: count
       - name: game_utc_at
         description: ""
@@ -25,7 +25,7 @@ models:
         description: ""
         meta:
           metrics:
-            - name: avg_play_time
+            avg_play_time:
               type: average
       - name: time_control
         description: ""
