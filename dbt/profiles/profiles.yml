@@ -8,8 +8,7 @@ default:
   outputs:
     production:
       type: bigquery
-      method: service-account
-      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      method: oauth
       project: "{{ env_var('GCP_PROJECT') }}"
       location: EU
       dataset: dbt
