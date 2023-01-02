@@ -5,7 +5,6 @@
 # cd /usr/app/dbt
 # dbt seed --full-refresh
 # dbt run
-# cd /usr/app/packages/backend
 # --------------
-
+cd /usr/app/packages/backend
 exec yarn start
