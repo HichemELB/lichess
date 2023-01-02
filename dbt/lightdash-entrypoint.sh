@@ -8,4 +8,4 @@
 # --------------
 cd /usr/app/packages/backend
 exec yarn start
-echo $PGHOST
+RUN echo $PGHOST
