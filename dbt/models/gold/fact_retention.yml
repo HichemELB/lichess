@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_retention
+    description: ""
+    columns:
+      - name: date
+        description: ""
+      - name: one_day_retention_rate
+        description: ""
+      - name: one_week_retention_rate
+        description: ""
+      - name: one_month_retention_rate
+        description: ""
