@@ -30,3 +30,6 @@ models:
             fact_user_game:
                 materialized: view
                 +schema: gold
+            fact_retention:
+                materialized: view
+                +schema: gold
